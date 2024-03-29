@@ -8,6 +8,6 @@ resources:
 configMapGenerator:
   - name: dagster-values
     files:
-      - dagster_values.yaml=../../../app/dev/dagster_values.yaml
+      - dagster_values.yaml=dagster_values.yaml
 configurations:
   - kustomizeconfig.yaml
