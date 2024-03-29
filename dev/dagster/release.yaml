@@ -1,0 +1,20 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: dagster
+  namespace: dagster
+spec:
+  chart:
+    spec:
+      chart: dagster
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: dagster
+      version: 1.1.15
+  interval: 1m0s
+  valuesFrom:
+  - kind: ConfigMap
+    name: dagster-values
+    valuesKey: dagster_values.yaml
