@@ -3,7 +3,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: dagster
-  namespace: test
+  namespace: dagster
 spec:
   interval: 10m0s
   url: https://dagster-io.github.io/helm
